@@ -30,3 +30,5 @@ Follow these steps to set up and deploy the serverless architecture:
    - Ensure the message payload contains necessary information for the Cloud Function to send verification emails.
 
 The Cloud Function handles email verification and tracking of sent emails. Additionally, the function's source code is stored in a Google Storage bucket to be accessed and executed by the Cloud Function.
+
+For more information on Google Cloud Functions, refer to the [Google Cloud Functions documentation](https://cloud.google.com/functions/docs/concepts/overview#:~:text=Google%20Cloud%20Functions%20is%20a,event%20being%20watched%20is%20fired).
