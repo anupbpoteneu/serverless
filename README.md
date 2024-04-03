@@ -20,6 +20,7 @@ Follow these steps to set up and deploy the serverless architecture:
 2. **Cloud Function Implementation:**
    - Create a Cloud Function triggered by Pub/Sub messages for user account verification.
    - Ensure the Cloud Function sends verification emails with expiring links and tracks sent emails in Cloud SQL.
+   - Updated the Cloud Function to handle HTTPS and remove the port number from URL link of email.
 
 3. **Pub/Sub Setup:**
    - Create a Pub/Sub topic named "verify_email" and set up a subscription for the Cloud Function.
@@ -29,6 +30,10 @@ Follow these steps to set up and deploy the serverless architecture:
    - Update the web application to publish messages to the "verify_email" Pub/Sub topic when new user accounts are created.
    - Ensure the message payload contains necessary information for the Cloud Function to send verification emails.
 
+5. **SSL Certificate Setup:**
+   - For HTTPS support, refer to the [Google Cloud Load Balancing documentation](https://cloud.google.com/load-balancing/docs/ssl-certificates) for instructions on setting up SSL certificates.
+
 The Cloud Function handles email verification and tracking of sent emails. Additionally, the function's source code is stored in a Google Storage bucket to be accessed and executed by the Cloud Function.
 
 For more information on Google Cloud Functions, refer to the [Google Cloud Functions documentation](https://cloud.google.com/functions/docs/concepts/overview#:~:text=Google%20Cloud%20Functions%20is%20a,event%20being%20watched%20is%20fired).
+

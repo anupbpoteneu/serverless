@@ -81,7 +81,7 @@ functions.cloudEvent('funcemail', async (cloudEvent) => {
     to: email,
     subject: "Regarding verification",
     text: `Hello,\n\nplease do the verification. We hope you are doing well!\n\nBest regards,\nWebOrg`,
-    html: `<h4>Hello ${firstName}, your email ID is: ${email}. Please complete your verification!</h4><p>Click <a href="http://anupbpote.me:3000/v1/user/verify?trackid=${trackId}">here</a> to verify your email address.</p>`
+    html: `<h4>Hello ${firstName}, your email ID is: ${email}. Please complete your verification!</h4><p>Click <a href="https://anupbpote.me/v1/user/verify?trackid=${trackId}">here</a> to verify your email address.</p>`
   });
 
   console.log("Email sent successfully");
